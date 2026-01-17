@@ -1,6 +1,5 @@
 package com.neumorphic.livewallpaper;
 
-import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
 import android.content.Context;
@@ -17,10 +16,11 @@ import android.widget.Toast;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.InputStream;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "NeumorphicWallpaperPrefs";
     private static final String PREF_BACKGROUND_URI = "background_uri";
