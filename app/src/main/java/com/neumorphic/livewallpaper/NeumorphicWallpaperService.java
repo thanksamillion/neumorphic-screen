@@ -13,6 +13,7 @@ import android.graphics.Paint;
 import android.graphics.RadialGradient;
 import android.graphics.Shader;
 import android.net.Uri;
+import android.os.Build;
 import android.service.wallpaper.WallpaperService;
 import android.view.SurfaceHolder;
 
@@ -61,7 +62,13 @@ public class NeumorphicWallpaperService extends WallpaperService {
             };
 
             IntentFilter filter = new IntentFilter("com.neumorphic.livewallpaper.SETTINGS_CHANGED");
-            registerReceiver(settingsReceiver, filter);
+
+            // Register receiver with proper flags for Android 8.0+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                registerReceiver(settingsReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
+            } else {
+                registerReceiver(settingsReceiver, filter);
+            }
         }
 
         @Override
