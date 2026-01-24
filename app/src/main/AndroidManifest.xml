@@ -2,40 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.neumorphic.livewallpaper">
 
-    <uses-feature
-        android:name="android.software.live_wallpaper"
-        android:required="true" />
-
     <application
         android:allowBackup="true"
         android:icon="@android:drawable/ic_menu_gallery"
-        android:label="Neumorphic Live Wallpaper"
+        android:label="Neumorphic Screen"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Neumorphic Live Wallpaper"
+            android:label="Neumorphic Screen"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name=".NeumorphicWallpaperService"
-            android:enabled="true"
-            android:permission="android.permission.BIND_WALLPAPER"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.service.wallpaper.WallpaperService" />
-            </intent-filter>
-            <meta-data
-                android:name="android.service.wallpaper"
-                android:resource="@xml/wallpaper" />
-        </service>
 
     </application>
 

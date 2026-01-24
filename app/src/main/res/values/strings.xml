@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Neumorphic Live Wallpaper</string>
-    <string name="wallpaper_description">A beautiful neumorphic design live wallpaper</string>
+    <string name="app_name">Neumorphic Screen</string>
+    <string name="app_description">An interactive neumorphic design app</string>
 </resources>
